@@ -35,9 +35,9 @@ jobs:
             sudo apt-get update
 
             # unixodbc-dev and locales-all are needed by mssql-tools, plus a very old libssl (which we need to borrow from Debian 8):
-            wget "http://security.debian.org/debian-security/pool/updates/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u7_amd64.deb"
-            sudo apt install ./libssl1.0.0_1.0.1t-1+deb8u7_amd64.deb
-            rm -f ./libssl1.0.0_1.0.1t-1+deb8u7_amd64.deb
+            #wget "http://security.debian.org/debian-security/pool/updates/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u7_amd64.deb"
+            #sudo apt install ./libssl1.0.0_1.0.1t-1+deb8u7_amd64.deb
+            #rm -f ./libssl1.0.0_1.0.1t-1+deb8u7_amd64.deb
             sudo ACCEPT_EULA=Y apt-get install -y rpm postgresql-client mysql-client mssql-tools unixodbc-dev locales-all
       - checkout
       - restore_cache:
